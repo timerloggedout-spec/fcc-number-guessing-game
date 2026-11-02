@@ -25,12 +25,12 @@ NUMBER_OF_GUESSES=0
 while true
 do
   read GUESS
-  NUMBER_OF_GUESSES=$(( NUMBER_OF_GUESSES + 1 ))
   if [[ ! $GUESS =~ ^[0-9]+$ ]]
   then
     echo "That is not an integer, guess again:"
     continue
   fi
+  NUMBER_OF_GUESSES=$(( NUMBER_OF_GUESSES + 1 ))
   if [[ $GUESS -eq $SECRET_NUMBER ]]
   then
     break
